@@ -4,7 +4,7 @@ from time import sleep
 url = 'https://api.telegram.org/bot433006721:AAEUDSy0EKAZK71JctawQLqMyZMWlE0mMgA/'
 
 def get_updates_json(request):
-    params = {'timeout': 500, 'offset': None}
+    params = {'timeout': 1500, 'offset': None}
     response = requests.get(request + 'getUpdates', data=params)
     return response.json()
 
