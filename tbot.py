@@ -4,7 +4,7 @@ from time import sleep
 url = 'https://api.telegram.org/bot433006721:AAEUDSy0EKAZK71JctawQLqMyZMWlE0mMgA/'
 
 def get_updates_json(request):
-    params = {'timeout': 1500, 'offset': None}
+    params = {'timeout': 1000, 'offset': None}
     response = requests.get(request + 'getUpdates', data=params)
     return response.json()
 
@@ -31,7 +31,7 @@ def main():
                 send_mess(get_chat_id(lu), 'error description 0001')
               
             update_id += 1
-    sleep(1)
+    sleep(3)
 
 if __name__ == '__main__':
     main()
